@@ -9,18 +9,21 @@ namespace BugReportApp
         public string Title;
         public BugSeverity Severity;
         public bool IsFixed;
+        public void PrintBugInfo() { Console.WriteLine($"[#{Id}] {Title}\t|\tSeverity: {Severity}\t|\tFixed: {IsFixed}"); }
+        public void MarkAsFixed()
+        {
+            IsFixed = true;
+            Console.WriteLine($"Bug #{Id} has been fixed");
+        }
+        public string GetRetestStatus()
+        {
+            if (IsFixed)
+                return "Ready for retest";
+            return "Still broken";
+        }
     }
     class Program
     {
-        static void PrintBugInfo(BugReport bug)
-        {
-            if (bug == null)
-            {
-                Console.WriteLine("Bug report not found");
-                return;
-            }
-            Console.WriteLine($"[#{bug.Id}] {bug.Title}\t|\tSeverity: {bug.Severity}\t|\tFixed: {bug.IsFixed}");
-        }
         static void Main(string[] args)
         {
             BugReport bug1 = new BugReport
@@ -30,7 +33,7 @@ namespace BugReportApp
                 Severity = BugSeverity.Critical,
                 IsFixed = false
             };
-            PrintBugInfo(bug1);
+            bug1.PrintBugInfo();
 
             BugReport bug2 = new BugReport
             {
@@ -39,9 +42,10 @@ namespace BugReportApp
                 Severity = BugSeverity.Medium,
                 IsFixed = true
             };
-            PrintBugInfo(bug2);
-
-            PrintBugInfo(null);
+            bug2.PrintBugInfo();
+            bug1.MarkAsFixed();
+            Console.WriteLine(bug1.GetRetestStatus());
+            bug1.PrintBugInfo();
         }
     }
 }
