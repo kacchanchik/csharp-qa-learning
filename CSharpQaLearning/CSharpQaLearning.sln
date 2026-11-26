@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_BugReport", "Lesson_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_AccessModifiers", "Lesson_AccessModifiers\Lesson_AccessModifiers.csproj", "{77344DBF-1D94-402E-A6D3-61C4A8B7F9A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_Encapsulation", "Lesson_Encapsulation\Lesson_Encapsulation.csproj", "{7015A2AA-B09D-475F-8D7A-27055224E779}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{77344DBF-1D94-402E-A6D3-61C4A8B7F9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77344DBF-1D94-402E-A6D3-61C4A8B7F9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77344DBF-1D94-402E-A6D3-61C4A8B7F9A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7015A2AA-B09D-475F-8D7A-27055224E779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7015A2AA-B09D-475F-8D7A-27055224E779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7015A2AA-B09D-475F-8D7A-27055224E779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7015A2AA-B09D-475F-8D7A-27055224E779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
